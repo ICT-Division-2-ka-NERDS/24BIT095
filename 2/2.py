@@ -1,0 +1,5 @@
+A,B,C = map(int, input('Enter 3 Numbers :').split())
+largest = max(A,B,C)
+smallest = min(A,B,C)
+print('The Largest Value is',largest)
+print('The Smallest Value is',smallest)
