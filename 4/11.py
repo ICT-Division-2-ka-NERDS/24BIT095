@@ -1,4 +1,4 @@
-def q11():
+def sin_x():
     def factorial(n):
         fact = 1
         for i in range(1, n + 1):
@@ -14,4 +14,4 @@ def q11():
     
     print("sin(x) =", sin_x)
 
-q11()
+sin_x()
