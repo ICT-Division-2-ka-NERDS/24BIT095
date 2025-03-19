@@ -1,29 +1,42 @@
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+A = int(input('Enter a Number:'))
 
-def is_perfect(n):
-    return n == sum(i for i in range(1, n) if n % i == 0)
+prime = 0
+for i in range(2,A):
+    if A%i==0:
+        prime+=1
+if prime==0:
+    print('Yes,its a prime number')
+else:
+    print('No,its not a prime number')
 
-def is_armstrong(n):
-    num_str = str(n)
-    num_len = len(num_str)
-    return n == sum(int(digit) ** num_len for digit in num_str)
+perfect = 0
+for i in range(1,A):
+    if A%i==0:
+        perfect+=i    
+if perfect==A:
+    print('Yes,its a perfect number')
+else:
+    print('No,its not a perfect number')
 
-def is_palindrome(n):
-    return str(n) == str(n)[::-1]
+armstrong = 0
+length = len(str(A))
+B = str(A)
+for i in B:
+    armstrong+=int(i)**length
+if armstrong==A:
+    print('Yes,its a armstrong number')
+else:
+    print('No,its not a armstrong number')
 
-def is_automorphic(n):
-    return str(n) == str(n**2)[-len(str(n)):]
+palindrome = 0
+C = str(A)
+if C==C[::-1]:
+    print('Yes,its a palindrome number')
+else:
+    print('No,its not a palindrome number')
 
-A = int(input("Enter a number: "))
-
-print(f"{A} is a prime number: {is_prime(A)}")
-print(f"{A} is a perfect number: {is_perfect(A)}")
-print(f"{A} is an Armstrong number: {is_armstrong(A)}")
-print(f"{A} is a palindrome: {is_palindrome(A)}")
-print(f"{A} is an automorphic number: {is_automorphic(A)}") 
+square = A*A
+if square%(10**len(str(A)))==A:
+    print('Yes,its a automorphic number')
+else:
+    print('No,its not a automorphic')
