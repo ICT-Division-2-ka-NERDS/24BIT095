@@ -48,8 +48,8 @@ class Time:
 
 
 
-A = Time(10, 20, 30)  
-B = Time(5, 10, 15)   
+A = Time(10, 23, 54)  
+B = Time(6, 18, 12)   
 
 print("Time A:")
 A.display()
